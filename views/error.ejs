@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<% include ./layout/head %>
+
+
+<body>
+   <div class="wrapper">
+      <div class="abs-center wd-xl">
+         <!-- START card-->
+         <div class="text-center mb-4">
+            <div class="mb-3">
+               <em class="fa fa-wrench fa-5x text-muted"></em>
+            </div>
+            <div class="text-lg mb-3"><%= status %></div>
+            <p class="lead m-0">Ha ocurrido un error :(</p>
+            <p><%= message %></p>
+            <p>Intente de nuevo en unos instantes</p>
+         </div>
+         <ul class="list-inline text-center text-sm mb-4">
+            <li class="list-inline-item">
+               <a class="text-muted" href="/">Inicio</a>
+            </li>
+            <li class="text-muted list-inline-item">|</li>
+            <li class="list-inline-item">
+               <a class="text-muted" href="javascript:history.go(-1)">Volver</a>
+            </li>            
+            <li class="text-muted list-inline-item">|</li>
+            <li class="list-inline-item">
+               <a class="text-muted" href="/auth/signIn">Login</a>
+            </li>
+         </ul>
+         <% include ./layout/min_footer %>
+      </div>
+   </div>
+   <% include ./layout/scripts %>
+</body>
+
+</html>

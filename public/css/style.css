@@ -1,0 +1,548 @@
+html, body{
+font-family: 'Raleway', sans-serif;
+   font-size: 100%;
+  overflow-x: hidden;
+
+}
+
+.navbar {
+
+  padding-left: 50px;
+  font-weight: bold;
+}
+
+.somos {
+
+  text-align: justify;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+h1,h2,h3,h4,h5,h6{
+
+      font-weight: bold;
+      color: #383838;
+}
+
+
+#estilo{
+
+  background-color: #EE2A7B;
+  height: 5px;
+  width:50px;
+  margin-top: 5px;
+  margin-left: 4px;
+}
+
+
+.principios {
+   margin-top: 30px;
+  font-size: 16px;
+
+}
+
+/*--banner start here--*/
+.banner {
+
+  background: url(../imagenes/slider/slider.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+
+}
+
+.header {
+  background: rgba(0, 0, 0, 0.69);
+}
+
+
+#bloque1{
+
+  margin-bottom: 20px;
+}
+
+#bloque1-imagen
+{
+
+   margin-top: 80px;
+
+   width: 693px;
+}
+
+
+#quienes-somos{
+
+
+   padding-top: 80px;
+   text-align: center;
+   padding-bottom: 80px;
+}
+
+#bloque2 {
+
+    border: 1px solid #000;
+
+
+}
+
+
+#img
+{
+
+ background: url(../imagenes/bloque2/2.jpg);
+
+}
+
+#img
+{
+
+ background: url(../imagenes/bloque2/2.jpg);
+ }
+
+#img2
+{
+
+ background: url(../imagenes/bloque2/1.jpg);
+ 
+}
+
+
+
+#bloque4 {
+
+  background: url(../imagenes/bloque4/bloque4.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height:100%;
+  width: 100%;
+}
+
+#bloque3 {
+
+  background: url(../imagenes/bloque3/bloque3.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height:100%;
+  width: 100%;
+}
+
+#afiliados {
+
+  padding-top: 40px;
+  padding-bottom: 80px;
+}
+
+#bloque4
+{
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.objetivos{
+
+  margin-top: 40px;
+
+}
+
+#objetivos {
+
+  height: 100%;
+}
+
+#fila-objetivos{
+
+  padding-top: 50px;
+  padding-bottom: 60px;
+  
+}
+
+.col-centrada{
+    float: none;
+    margin: 0 auto;
+}
+
+.col-left {
+    float: left;
+    margin: 0 auto;
+}
+
+.col-right{
+    float: right;
+    margin: 0 auto;
+}
+
+
+#estilo-objetivos{
+    background-color: #EE2A7B;
+   height: 5px;
+  width:50px;
+}
+
+
+.estilo-miembros{
+    background-color: #EE2A7B;
+   height: 5px;
+  width:50px;
+  margin-bottom: 20px;
+
+}
+
+
+.objetivos-3 {
+  text-align: center;
+}
+
+#form{
+
+  font-size: 15px;
+}
+
+#redes-sociales {
+
+    background: #EE2A7B;
+    font-size: 16px;
+    border-radius: 30px;
+    text-align: center;
+    height: 32px;
+    width: 32px;
+    line-height: 28px;
+    padding-top: 2px;
+    color: #fff !important;" 
+}
+
+.estilo-novedades {
+
+  background-color: #0072B3;
+
+   height: 5px;
+  width:50px;
+  margin-bottom: 20px;
+
+}
+
+#p-objetivos{
+      font-size: 15px;
+      hyphens: none;
+}
+
+#natural{
+
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+#aliado {
+
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+#juridica{
+
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+
+#emprendedor {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+#boton-objetivos-enviar {
+  margin-bottom: 40px;
+  margin-top: 15px;
+}
+
+.blog .carousel-indicators {
+  left: 0;
+  top: auto;
+    bottom: -40px;
+
+}
+
+/* The colour of the indicators */
+.blog .carousel-indicators li {
+    background: #a3a3a3;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+}
+
+.blog .carousel-indicators .active {
+  background: #707070;
+}
+
+
+#p-objetivos {
+
+    /* para separacion entre palabras */   
+    line-height: 18pt; 
+    hyphens: none;
+     text-align: center;
+
+     white-space: pre-line;
+
+}
+
+.card-text{
+
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.radio {
+
+    margin: 15px;
+}
+
+#unete {
+
+      margin-top:-12px;
+    }
+
+
+
+
+@media only screen and (max-width: 1200px) {
+    /* For mobile phones: */
+    .banner {
+        height: 100%;
+    }
+
+
+    
+    #objetivos-3 {
+
+      width: 100px;
+      height: 100px;
+    }
+
+    
+}
+
+
+@media only screen and (max-width: 1024px) {
+    /* For mobile phones: */
+    .banner {
+        height: 100%;
+    }
+
+    .header {
+
+      font-size: 12px;
+    }
+
+    .nav-link {
+
+            font-size: 12px;
+
+    }
+
+    #objetivos-3 {
+
+      height: 100px;
+      width: 100px;
+    }
+
+    #p-objetivos{
+      font-size: 12px;
+    }
+
+    
+   
+}
+
+
+@media only screen and (max-width: 640px) {
+    /* For mobile phones: */
+    .banner {
+        height: 100%;
+    }
+
+  
+}
+
+@media only screen and (max-width: 992px) {
+    /* For mobile phones: */
+    .banner {
+        height: 100%;
+    }
+
+     #img,#img2{
+
+       display: none;
+
+
+    }
+
+    
+    #unete{
+      margin: 0px;
+    }
+
+    #natural{
+      margin:0px;
+      padding: 0px;
+    }
+    #juridica{
+      margin:0px;
+      padding: 0px;
+
+    }
+    #emprendedor{
+
+      margin:0px;
+      padding: 0px;
+
+    }
+    #caja-unete {
+       margin:0px;
+      padding: 0px;
+
+    }
+}
+@media only screen and (max-width: 800px) {
+
+
+      #img{
+
+       height: 100%;
+       width: 100%;
+       display: block;
+
+
+    }
+    #objetivos-3 {
+
+      height: 100px;
+      width: 100px;
+    }
+
+   
+}
+
+@media only screen and (max-width: 720px) {
+
+    #objetivos-3 {
+
+      height: 100px;
+      width: 100px;
+    }
+
+    #div1,#div2,#div3{
+
+        margin: 6px
+    }
+    
+}
+
+@media only screen and (max-width: 640px) {
+
+    #objetivos-3 {
+
+      height: 100px;
+      width: 100px;
+    }
+
+    #caja-unete{
+
+      margin: 6px;
+    }
+
+
+}
+
+
+
+@media only screen and (max-width: 480px) {
+    /* For mobile phones: */
+    .banner {
+        height: 100%;
+    }
+
+    #img,#img2{
+
+       display: none;
+
+    }
+
+    
+    #caja-unete{
+
+      margin: 6px;
+    }
+    #objetivos-3 {
+
+      height: 80px;
+      width: 80px;
+    }
+     
+}
+
+
+@media only screen and (max-width: 320px) {
+
+    #objetivos-3 {
+
+      height: 80px;
+      width: 80px;
+    }
+
+    
+}
+
+
+#redes-sociales:hover {
+    background: #068edc; 
+  transition: all 225ms ease-in 0s; 
+}
+
+
+
+.nav-link :hover {
+      padding-bottom: 6px;
+
+  border-bottom: 4px solid #EE2A7B;
+
+}
+
+
+
+.card-text {
+
+  font-size: 12px;
+}
+
+.footer {
+
+  margin-top: 30px;
+  margin-bottom: 30px;  
+}
+
+
+#mc_embed_signup form {display:block; position:relative; text-align:left; padding:10px 0 10px 3%}
+#mc_embed_signup h2 {font-weight:bold; padding:0; margin:15px 0; font-size:1.4em;}
+#mc_embed_signup input {border:1px solid #999; -webkit-appearance:none;}
+#mc_embed_signup input[type=checkbox]{-webkit-appearance:checkbox;}
+#mc_embed_signup input[type=radio]{-webkit-appearance:radio;}
+#mc_embed_signup input:focus {border-color:#333;}
+#mc_embed_signup .button {clear:both; background-color: #aaa; border: 0 none; border-radius:4px; letter-spacing:.03em; color: #FFFFFF; cursor: pointer; display: inline-block; font-size:15px; height: 32px; line-height: 32px; margin: 0 5px 10px 0; padding:0; text-align: center; text-decoration: none; vertical-align: top; white-space: nowrap; width: auto; transition: all 0.23s ease-in-out 0s;}
+#mc_embed_signup .button:hover {background-color:#777;}
+#mc_embed_signup .small-meta {font-size: 11px;}
+#mc_embed_signup .nowrap {white-space:nowrap;}     
+#mc_embed_signup .clear {clear:none; display:inline;}
+
+#mc_embed_signup label {display:block; font-size:16px; padding-bottom:10px; font-weight:bold;}
+#mc_embed_signup input.email {font-family:"Open Sans","Helvetica Neue",Arial,Helvetica,Verdana,sans-serif; font-size: 15px; display:block; padding:0 0.4em; margin:0 4% 10px 0; min-height:32px; width:58%; min-width:130px; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px;}
+#mc_embed_signup input.button {display:block; width:35%; margin:0 0 10px 0; min-width:90px;}
+
+#mc_embed_signup div#mce-responses {float:left; top:-1.4em; padding:0em .5em 0em .5em; overflow:hidden; width:90%;margin: 0 5%; clear: both;}
+#mc_embed_signup div.response {margin:1em 0; padding:1em .5em .5em 0; font-weight:bold; float:left; top:-1.5em; z-index:1; width:80%;}
+#mc_embed_signup #mce-error-response {display:none;}
+#mc_embed_signup #mce-success-response {color:#529214; display:none;}
+#mc_embed_signup label.error {display:block; float:none; width:auto; margin-left:1.05em; text-align:left; padding:.5em 0;}

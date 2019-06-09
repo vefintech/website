@@ -1,0 +1,9 @@
+<div class="row"> 
+    <% for(var i=0;i<stats.length; i++) {%>
+    <% const item = stats[i] %>
+    <div class="col-xl-4 col-md-6 text-center">
+        <h1 class="text-warning"><%= item.n %></h1>
+        <div class="text-uppercase"><%= item.name  %></div>        
+    </div>
+    <% } %>    
+</div>

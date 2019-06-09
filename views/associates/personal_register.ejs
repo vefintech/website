@@ -1,0 +1,110 @@
+        <!--NATURAL-->
+      
+        <div id="natural">
+          <form enctype="multipart/form-data" action="/registrar" method="post">	
+          <input class="form-control" name="type" value="PERSONAL" type="hidden">
+          <input class="form-control" value="" type="hidden" name="bot">  
+
+            <div class="row"  >
+              <div class="col-md-6">
+                 <div class="form-group">
+                            <input placeholder="Nombres y apellidos" class="form-control" id="form" type="text" name="names"  data-parsley-minlength="10" required style="border-radius: 52px;">
+                        </div>
+
+                  <div class="form-group">
+                  <input placeholder="Correo electronico" class="form-control" type="email" name="email" id="form" required data-parsley-type="email" style="border-radius: 52px;">
+                </div>
+                <div class="form-group">
+                            <input required placeholder="clave" class="form-control" id="form" type="password" name="password"   data-parsley-minlength="6" style="border-radius: 52px;">
+                </div>
+                <div class="form-group">
+                  <input type="text" name="nationality" onkeypress="return soloLetras(event)"  id="form" style="border-radius: 52px;" placeholder="Nacionalidad" class="form-control" required>
+                </div>
+                <div class="form-group">
+                  <input type="text" name="city" onkeypress="return soloLetras(event)"  id="form" style="border-radius: 52px;" placeholder="Ciudad" class="form-control" required>
+                </div>                
+                
+                <div class="form-group">
+                  <input type="text" name="phone" onkeypress="return isNumberKey(event)" id="form" style="border-radius: 52px;" placeholder="Teléfono" class="form-control">
+                </div>
+                <div class="form-group">
+                            <input placeholder="Fecha de Nacimiento" class="form-control" id="form" type="date" name="birthdate" id="form" style="border-radius: 52px;" >
+                        </div>
+
+                
+              </div>
+              <div class="col-md-6">
+                
+                <div class="form-group" style="width: 50%;" id="form">
+                  <h6 style="color: #fff; text-align: left;">¿Qué te atrae de la Comunidad de Fintech?</h6>
+                </div>
+                <div class="form-check">
+                              <input checked class="form-check-input" type="radio" name="answer" id="form" value="Soy entusiasta de la Nuevas Tecnologías"> 
+                              <label class="form-check-label" id="form">
+                                   Soy entusiasta de la Nuevas Tecnologías
+                              </label>
+                          </div>  
+                          <div class="form-check">
+                              <input  class="form-check-input" type="radio" name="answer" id="form" value="Estudiante de Tecnología">
+                              <label class="form-check-label" id="form"> 
+                                 Estudiante de Tecnología
+                              </label>
+                          </div>
+                          <div class="form-check">
+                              <input  class="form-check-input" type="radio" name="answer" id="form" value="Usuario">
+                              <label class="form-check-label" id="form"> 
+                                 Usuario
+                              </label>
+                          </div> 
+                          <div class="form-check">
+                              <input  class="form-check-input" type="radio" name="answer" id="form" value="Comunidad en General">
+                              <label class="form-check-label" id="form"> 
+                                 Comunidad en General
+                              </label>
+                          </div>
+                          <div class="form-check">
+                              <input  class="form-check-input" type="radio" name="answer" id="form" value="Comerciante informal">
+                              <label class="form-check-label" id="form"> 
+                                 Comerciante informal
+                              </label>
+                          </div>
+                          <div class="form-check">
+                              <input  class="form-check-input" type="radio" name="answer" id="form" value="Quiero promover el uso de las tecnologías">
+                              <label class="form-check-label" id="form"> 
+                                   Quiero promover el uso de las tecnologías
+                              </label>
+                          </div>  
+              </div>
+            </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                          <label class="col-form-label" id="form" style="text-align: justify;">
+                  La sociedad Venezolana de FinTech y Nuevas tecnologias, FinTech Venezuela está solicitando sus datos personales para poder comunicarse con uste y responder a su solicitud. Solo usaremos esta información por las razones anteriores, a menos que usted nos dé su consentimiento para usar esta información de otras maneras. Siempre puede recordar su consentimiento, según los Términos y Condiciones. 
+                </label>
+                               
+                          <div class="checkbox c-checkbox" id="form">
+                              <label>
+                                  <input required type="checkbox" name="consent" required>
+                                   Doy mi consentimiento expresamente informado para el uso de mis datos personales como se describe en la declaración de privacidad de Internet Society.
+                              </label>
+                          </div>
+                      </div>   
+              
+                  
+
+                   </div>
+                 </div>
+
+            
+          <div class="row">
+                <div class="col-md-12">
+                  <center>
+                    <div class="form-group" id="boton-objetivos-enviar">
+                      <button type="submit" name="enviar-natural" class="btn btn-md" style="background-color: #ee2a7b; color: #fff; border-radius: 52px; width: 150px; height: 45px; font-weight: bold;">ENVIAR</button>
+                    </div>
+                  </center>
+                </div>
+              </div>
+        </form>
+        </div>        

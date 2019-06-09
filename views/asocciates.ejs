@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+   <% include ./layout/head_index %>
+  <body>
+    		<!--MENU Y BANNER-->
+
+    <div class="header">
+      <div class="row" style="padding-top: 20px; padding-bottom: 20px;">
+        <div class="col-md-1"></div>					
+        <div class="col-md-2">
+          <center>
+            <a href="/">
+              <img src="imagenes/logo/logo.png" class="img-fluid">
+            </a>
+          </center>
+        </div>
+        <div class="col-md-6" >
+              <nav class="navbar navbar-expand-sm">
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse"><i class="fas fa-bars" style="color: #fff;"></i></button> 
+                  <div class="collapse navbar-collapse" id="navbar-collapse">
+                      <ul class="nav navbar-nav w-100 justify-content-center">
+                          <li class="nav-item"> <a class="nav-link" href="/" style="color: #fff; "><h7> INICIO</h7></a>
+                          </li>
+                          <li class="nav-item"> <a class="nav-link" href="/#nosotros" style="color: #fff;"><h7>QUIÉNES SOMOS </h7></a>
+                          </li>
+                          <li class="nav-item"> <a class="nav-link" href="/#objetivos" style="color: #fff;"><h7>OBJETIVOS</h7></a>
+                          </li>
+                          <li class="nav-item"> <a class="nav-link" href="/#afiliados" style="color: #fff; "><h7>MIEMBROS</h7></a>
+                          </li>
+                          <li class="nav-item"> <a class="nav-link" href="/#novedades" style="color: #fff; "><h7>NOVEDADES</h7></a>
+                          </li>                       
+                      </ul>
+                  </div>
+                    
+              </nav>
+        
+        </div>
+        <div class="col-md-2">
+            <% if (authenticated) {%>
+            <div style="margin-top: 10px;">
+              <a href="/auth/signOut" class="btn btn-sm" style="background-color: #ee2a7b; color: #fff; border-radius: 52px; width: 50%; font-weight: bold; ">SALIR</a>
+            </div>         
+            <% }else { %>
+            <div style="margin-top: 10px;">
+              <a href="/auth/signIn"  class="btn btn-sm" style="background-color: #ee2a7b; color: #fff; border-radius: 52px; width: 50%; font-weight: bold; ">INGRESAR</a>
+            </div>                         
+            <% } %> 
+        </div>
+        <div class="col-md-1"></div>
+      </div>
+    </div> 
+    <br />
+    <div class="container-fluid" >
+        <% include members %>
+    </div>    
+    <div class="clearfix"></div>
+
+  <!--footer-->
+    <div class="container-fluid">
+      <div class="footer">
+        <div class="row" style="padding-top: 20px; padding-bottom: 20px;">
+          <div class="col-md-4" style="border-right: 1px solid #ee2a7b; padding-top: 5px;">
+            <center>
+              <img src="imagenes/footer/footer.png" class="img-fluid">
+            </center>
+            <div class="row">
+              <div class="col-md-12" >
+                <br>
+                <div style="width: 70%;" class="col-centrada">
+                  <p style="text-align: center; line-height: 18pt;">
+                    Construimos una sociedad de cultura tecnológica avanzada a través de la integración, la capacitación, la innovación y el trabajo en equipo. 
+                  </p>
+                </div>
+                
+              </div>
+            </div>
+          </div>					
+          <div class="col-md-4 text-center" style="border-right: 1px solid #ee2a7b; padding-top: 5px;">
+               <ul class="nav navbar-nav w-100 justify-content-center">
+                          <li class="nav-item"> <a class="nav-link" href="/" style="color: #383838;   font-weight: bold; margin:2px; font-size: 14px; "><h7> INICIO</h7></a>
+                          </li>
+                          <li class="nav-item"> <a class="nav-link" href="/#nosotros" style="color: #383838; font-weight: bold; margin:2px; font-size: 14px;"><h7>QUIÉNES SOMOS</h7></a>
+                          </li>
+                          <li class="nav-item"> <a class="nav-link" href="/#objetivos" style="color: #383838; font-weight: bold; margin:2px; font-size: 14px;"><h7>OBJETIVOS</h7></a>
+                          </li>
+                          <li class="nav-item"> <a class="nav-link" href="/#afiliados" style="color: #383838; font-weight: bold; margin:2px; font-size: 14px;"><h7>MIEMBROS</h7></a>
+                          </li>
+                          <li class="nav-item"> <a class="nav-link" href="/afiliados" style="color: #383838; font-weight: bold; margin:2px; font-size: 14px;"><h7>AFILIADOS</h7></a>
+                          </li>                          
+                          <li class="nav-item"> <a class="nav-link" href="/#novedades" style="color: #383838; font-weight: bold; margin:2px; font-size: 14px; "><h7>NOVEDADES</h7></a>
+                          </li>
+                          
+                      </ul>
+                      <div class="row">
+                        <div class="col-md-12" style="margin-top: 5px;">
+                          <a href="https://commerce.coinbase.com/checkout/74f7177a-2ea2-4304-ad88-ffebc2fb8fc1" class="btn btn-lg" target="_blank" style="background-color: #f7931a; border-radius: 52px; font-weight: bold; color: #fff;">DONA EN <i class="fab fa-btc"></i></a>
+                        </div>
+                      </div>
+
+          </div>
+          <div class="col-md-4"  style="border-right: 1px solid #ee2a7b;">
+              <center>
+                <div style="padding-top: 35px; padding-bottom: 7px;">
+
+                  <div class="row">
+                    <div class="col-md-12" style="margin-bottom: 5px;">
+                      <a href="https://twitter.com/VFintech" target="_blank"><i class="fab fa-twitter fa-3x" id="redes-sociales"></i></a>
+                      <a href="https://www.facebook.com/ve.fintech/" target="_blank"><i class="fab fa-facebook-f fa-2x" id="redes-sociales"></i></a>
+                      <a href="https://www.instagram.com/ve.fintech/" target="_blank"><i class="fab fa-instagram fa-2x" id="redes-sociales"></i></a>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <a href="https://www.youtube.com/channel/UCFNa0s1ZVEcvuK2xG093PKQ" target="_blank"><i class="fab fa-youtube fa-2x" id="redes-sociales"></i></a>
+                      <a href="https://github.com/vefintech" target="_blank"><i class="fab fa-github-alt fa-2x" id="redes-sociales"></i></a>
+                      <a href="https://us19.admin.mailchimp.com/campaigns/s" target="_blank"><i class="far fa-envelope fa-2x" id="redes-sociales"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </center>
+              <div id="mc_embed_signup">
+                <form action="https://venezuelafintech.us19.list-manage.com/subscribe/post?u=30b086771ef16d66cefd84c76&amp;id=80fc8b296c" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                    <div id="mc_embed_signup_scroll">
+                  <center><label for="mce-EMAIL">Subscríbete a nuestro newsletter</label>
+                  <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+                    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_30b086771ef16d66cefd84c76_80fc8b296c" tabindex="-1" value=""></div>
+                    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div></center>
+                    </div>
+                </form>
+              </div>	
+          
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <p style="text-align: center;">Derechos reservado fintech 2018 | hecho con <i class="fas fa-heart" style="color: #ee2a7b"></i> amor por sus promotores |</p>
+        <p style="text-align: center;">Ésta página es creada gracias a DashBoost <a href="https://www.dashboost.org" target="_blank">https://www.dashboost.org</a> sitemap, terminos y condiciones.</p>
+
+      </div>
+    </div>
+  </div>
+   <% include ./layout/scripts_index %> 
+  </body>
+</html>

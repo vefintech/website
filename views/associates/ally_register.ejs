@@ -1,0 +1,97 @@
+
+<!--Aliado-->
+        <div id="aliado" style="display: none;">
+          <form enctype="multipart/form-data" action="/registrar" method="post">	
+          <input class="form-control" name="type" value="ALLY" type="hidden">
+          <input class="form-control" value="" type="hidden" name="bot">  
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input type="text" name="business_name" id="form" style="border-radius: 52px;" placeholder="Razón Social" class="form-control" required>
+                </div>
+                <div class="form-group" id="form">
+                            <label class="col-form-label" for="image">Logo</label>
+                            <input required accept="image/png, image/jpeg" class="form-control-file" id="image" type="file" name="image"   >
+                        </div>  
+                        <div class="form-group">
+                  <input type="email" name="email" id="form" style="border-radius: 52px;" placeholder="Correo electronico" class="form-control" required>
+                </div>
+                 <div class="form-group">
+                            <input required placeholder="clave" class="form-control" type="password" name="password"   data-parsley-minlength="6" style="border-radius: 52px;" id="form" required>
+                        </div>
+
+                  <div class="form-group">
+                  <input type="text" name="dni" id="form" style="border-radius: 52px;" placeholder="R.I.F" class="form-control" required>
+                </div>
+                <div class="form-group">
+                  <input type="text" name="address" id="form" style="border-radius: 52px;" placeholder="Domicilio Fiscal" class="form-control">
+                </div>
+              
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                  <input type="text" name="phone"  onkeypress="return isNumberKey(event)" id="form" style="border-radius: 52px;" placeholder="Teléfono" class="form-control" required>
+                </div>
+                <div class="form-group">
+                  <input type="text" name="contact" onkeypress="return soloLetras(event)" id="form" style="border-radius: 52px;" placeholder="Persona Contacto" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                  <input type="text" name="activity" id="form" style="border-radius: 52px;" placeholder="Actividad Comercial" class="form-control" required>
+                </div><br>
+
+                <div class="form-group" style="width: 50%; text-align: left;" id="form">
+                  <h6 style="color: #fff;">¿Qué te atrae de la Comunidad de Fintech?</h6>
+                </div>
+                <div class="form-group">
+                  <div class="form-check">
+                                <input checked class="form-check-input" type="radio" required name="answer" id="form" value="Quiero promover mis servicios">
+                                <label class="form-check-label" id="form">
+                                    Quiero promover mis servicios
+                                </label>
+                            </div>  
+                            <div class="form-check">
+                                <input  class="form-check-input" type="radio" required name="answer" id="form" value="Me gustaría aportar ideas">
+                                <label class="form-check-label" id="form">
+                                Me gustaría aportar ideas
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input  class="form-check-input" type="radio" required name="answer" id="form" value="Quiero colaborar activamente en la Asociación">
+                                <label class="form-check-label" id="form">
+                                Quiero colaborar activamente en la Asociación
+                                </label>
+                            </div>  
+
+                </div>
+              
+          </div>
+        </div>
+          <div class="row">
+              <div class="col-md-12">
+                 <div class="form-group">
+                      <label class="col-form-label" id="form" style="text-align: justify;">
+                    La sociedad Venezolana de FinTech y Nuevas tecnologias, FinTech Venezuela está solicitando sus datos personales para poder comunicarse con uste y responder a su solicitud. Solo usaremos esta información por las razones anteriores, a menos que usted nos dé su consentimiento para usar esta información de otras maneras. Siempre puede recordar su consentimiento, según los Términos y Condiciones.        
+                  </label>
+                   
+                      <div class="checkbox c-checkbox" id="form">
+                          <label>
+                              <input required type="checkbox" name="consent" required>
+                              Doy mi consentimiento expresamente informado para el uso de mis datos personales como se describe en la declaración de privacidad de Internet Society.
+                          </label>
+                      </div>
+                  </div>   
+
+              </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                  <center>
+                    <div class="form-group" id="boton-objetivos-enviar">
+                      <button type="submit" name="enviar-aliado" class="btn btn-md" style="background-color: #ee2a7b; color: #fff; border-radius: 52px; width: 150px; height: 45px; font-weight: bold; ">ENVIAR</button>
+                    </div>
+                  </center>
+                </div>
+            </div>
+        </form>
+  </div>

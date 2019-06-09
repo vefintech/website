@@ -1,0 +1,29 @@
+<% if (type=='PERSONAL') { %>
+<div class="card-body">
+     
+<div class="row">
+
+    <div class="col-6 text-center">
+        <img onerror="this.onerror=null;this.src='/img/user-default.png'" class="circle thumb96" src="/img/user-default.png" alt="">
+    </div>
+    <div class="col-6">
+        <h3 class="mt-0"><%= associate.names %></h3>
+        <ul class="list-unstyled mb-0">                   
+        <li class="mb-1">
+            <em class="fas fa-map-marker-alt fa-fw"></em>
+            <%= associate.address %>&nbsp;
+            <%= associate.city %>&nbsp;
+            <%= associate.nationality %>&nbsp;
+        </li>
+        <li class="mb-1">
+            <em class="fas fa-phone fa-fw"></em> <%= associate.phone %>
+        </li>
+        <li class="mb-1">
+        <em class="fa fa-envelope fa-fw"></em><%= associate.email %>
+        </li>
+        </ul>
+    </div>
+</div>
+</div>
+
+<% } %>

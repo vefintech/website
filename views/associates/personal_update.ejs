@@ -1,0 +1,49 @@
+<% if ((associate.type=='PERSONAL')) {%>
+<div class="row" id="personal-div"  >
+    <div class="col-xl-12">
+        <form enctype="multipart/form-data" id="personal-form" method="post" action="/admin/asociados/actualizar" data-parsley-validate="" novalidate="">
+            <!-- START card-->
+            <div class="card card-default">
+
+            <div class="card-body">
+                <div class="form-group">
+                    <label class="col-form-label" for="names">Nombres y apellidos *</label>
+                    <input value="<%= associate?associate.names: ''%>" placeholder="Nombres y apellidos" class="form-control" id="names" type="text" name="names"  data-parsley-minlength="10" required>
+                </div>
+                <div class="form-group">
+                    <label class="col-form-label" for="city">Ciudad *</label>
+                    <input value="<%= associate?associate.city: ''%>"  placeholder="Ciudad" class="form-control" id="city" type="text" name="city"  %> required>
+                </div>
+                <div class="form-group">
+                    <label class="col-form-label" for="nationality">Nacionalidad *</label>
+                    <input value="<%= associate?associate.nationality: ''%>"  placeholder="Nacionalidad" class="form-control" id="nationality" type="text" name="nationality"  %> required>
+                </div>
+                <div class="form-group">
+                    <label class="col-form-label" for="phone">Telefono</label>
+                    <input value="<%= associate?associate.phone: ''%>"  placeholder="Telefono" class="form-control" id="phone" type="phone" name="phone"  %> data-parsley-minlength="11">
+                </div>  
+                <div class="form-group">
+                    <label class="col-form-label" for="birthdate">Fecha de nacimiento</label>
+                    <input value="<%= associate?associate.birthdate: ''%>"  placeholder="Telefono" class="form-control" id="birthdate" type="date" name="birthdate"  %> >
+                </div>
+                
+                <input class="form-control" name="type" value="PERSONAL" type="hidden">
+                <input class="form-control" value="" type="hidden" name="bot">
+                <div class="required">* Campos requeridos</div>
+            </div>
+            <div class="card-footer">
+                <div class="clearfix">
+                    <div class="float-left">
+
+                    </div>
+                    <div class="float-right">
+                        <button class="btn btn-primary" type="submit">Guardar</button>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <!-- END card-->
+        </form>
+    </div>
+</div>
+<% }%>

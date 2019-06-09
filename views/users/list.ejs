@@ -1,0 +1,21 @@
+
+   <table class="data-table table table-striped my-4 w-100" id="table-users">
+      <thead>
+         <tr>
+            <th data-priority="1">Email</th>
+            <th data-priority="2">Role</th>
+            <th data-priority="3">Estatus</th>
+            <th data-priority="4"></th>
+         </tr>
+      </thead>
+      <tbody>
+      <% for(var i=0;i<users.length; i++) {%>
+         <tr >
+            <td><%= users[i].email %></td>
+            <td><%= users[i].rol %></td>
+            <td><%= users[i].status %></td>
+            <td></td>
+         </tr>
+         <% } %>  
+      </tbody>
+   </table>

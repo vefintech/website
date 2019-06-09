@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<% include ../layout/head %>
+
+
+<body>
+   <div class="wrapper">
+      <% include ../layout/header_admin %>
+      <% include ../layout/aside %>
+      
+      <!-- Main section-->
+      <section class="section-container">
+      <div class="content-wrapper">
+         <div class="content-heading">
+               <div>Asociados
+                  <small>Listado de asociados.</small>
+               </div>
+         </div>
+         <% include ../layout/alert %>
+         
+         <div class="card">
+            <div class="card-header">
+               <div class="card-title">
+                  <div class="float-right">
+                     <a href="/admin/asociados" >
+                        <i class="icon-reload"></i>
+                     </a>    
+                     <% if (authenticated && userLog.rol=='ADMIN') {%>
+                        <a href="/admin/asociados/agregar" >
+                           <i class="icon-plus"></i>
+                        </a>                     
+                        <a href="/admin/asociados/excel" >
+                           <i class="icon-cloud-download"></i>
+                        </a>
+                     <%}%>
+                  </div>               
+               </div>
+            </div>
+            <div class="card-body">
+               <% include list %>
+               <div id="page-selection"></div>
+            </div>
+         </div>         
+      </div>
+
+      </section>
+
+      <% include ../layout/footer %>
+   </div>
+   <% include ../layout/scripts %>
+   <script >
+      
+      $(document).ready( function () {
+         $('#page-selection').bootpag({
+            total: <%= Math.ceil(associates.total/associates.limit) %>,
+            maxVisible: 5,
+            page: <%= associates.page %>,
+        }).on("page", function(event, page){
+             const urlParams = new URLSearchParams(window.location.search);
+             urlParams.set('page',page);
+             var u= [window.location.pathname];
+             u.push(urlParams.toString());
+             window.location.href = u.join("?")
+        });         
+      })
+   </script>      
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<% include ../layout/head %>
+
+
+<body>
+   <div class="wrapper">
+      <% include ../layout/header_admin %>
+      <% include ../layout/aside %>
+      
+      <!-- Main section-->
+      <section class="section-container">
+      <div class="content-wrapper">
+         <div class="content-heading">
+               <div>Asociados
+                  <small>Informacion de asociado.</small>
+               </div>
+         </div>
+         <% include ../layout/alert %>
+         
+         <div class="card">
+            <div class="card-header">
+               <div class="card-title">
+                  Registrado desde <small class=" text-muted"><%= moment(associate.created_at).locale("es").fromNow(); %></small>               
+                  <div class="float-right">
+                     <a href="javascript:history.go(-1)" >
+                        <i class="icon-action-undo"></i>
+                     </a>
+                     <% if (authenticated && userLog.rol=='ADMIN') {%>
+                     <a href="/admin/asociados/<%= associate.uid %>/<%= type %>/editar" >
+                        <i class="icon-pencil"></i>
+                     </a>
+                     <a href="/admin/asociados/<%= associate.uid %>/<%= type %>/eliminar" >
+                        <i class="icon-trash"></i>
+                     </a>  
+                     <%}%>                                        
+                  </div>                
+               </div>
+
+            </div>
+            <% include view_personal %>
+            <% include view_legal %>
+            <% include view_entrepeneur %>
+            <% include view_ally %>
+         </div>         
+      </div>
+
+      </section>
+
+      <% include ../layout/footer %>
+   </div>
+   <% include ../layout/scripts %>
+   <script >
+
+      $(document).ready( function () {
+         console.log(moment("20111031", "YYYYMMDD").fromNow());
+      })
+   </script>      
+</body>
+
+</html>

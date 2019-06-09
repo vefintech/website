@@ -1,0 +1,45 @@
+<% if (type=='LEGAL') { %>
+<div class="card-body">
+    <div class="row">
+        <div class="col-6 text-center">
+            <img onerror="this.onerror=null;this.src='/img/user-default.png'" class="circle thumb96" src="/img/associates/<%= associate.image %>" alt="">
+        </div>
+        <div class="col-6">
+            <h3 class="mt-0"><%= associate.business_name %></h3>
+            <ul class="list-unstyled mb-0">    
+            <li class="mb-1">
+                <em class="fas fa-address-card fa-fw"></em>
+                <%= associate.dni %>
+            </li>                           
+            <li class="mb-1">
+                <em class="fas fa-map-marker-alt fa-fw"></em>
+                <%= associate.address %>
+            </li>
+            <li class="mb-1">
+                <em class="fas fa-phone fa-fw"></em> <%= associate.phone %>
+            </li>
+            <li class="mb-1">
+            <em class="fa fa-envelope fa-fw"></em><%= associate.email %>
+            </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="card-body bg-inverse">
+    <div class="row text-center">
+        <div class="col-4">
+            <p class="m-0 h3">Contacto</p>
+            <p class="m-0 text-muted"><%= associate.contact %></p>
+        </div>
+        <div class="col-4">
+            <p class="m-0 h3">Actividad</p>
+            <p class="m-0 text-muted"><%= associate.activity %></p>
+        </div>
+        <div class="col-4">
+            <p class="m-0 h3">Empleados</p>
+            <p class="m-0 text-muted"><%= associate.employees %></p>
+        </div>
+    </div>  
+</div>
+
+<% } %>

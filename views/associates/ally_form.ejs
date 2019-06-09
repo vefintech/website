@@ -1,0 +1,79 @@
+<div class="row" id="ally-div" style="display:<%= associate?(associate.type=='ALLY'?'block':'none'):'none'%>">
+    <div class="col-xl-12">
+        <form id="ally-form" enctype="multipart/form-data" method="post" action="<%= url %>" data-parsley-validate="" novalidate="">
+            <!-- START card-->
+            <div class="card card-default">
+            <div class="card-body">
+                <div class="form-group">
+                    <label class="col-form-label" for="business_name">Razón Social *</label>
+                    <input value="<%= associate?associate.business_name: ''%>" placeholder="Razón Social" class="form-control" id="business_name" type="text" name="business_name"  data-parsley-minlength="10" required>
+                </div>
+                <% if ((associate)) {%>
+                    <% if (associate.image!=null && associate.image!='' ) {%>
+                        <div class="px-2">
+                        <img onerror="this.src='/img/user-default.png'" class="img-fluid rounded thumb64" src="/img/associates/<%= associate.image %>" alt="">
+                        </div> 
+                    <% }%> 
+                <% }%>
+                                              
+                <div class="form-group">
+                    <label class="col-form-label" for="image">Logo</label>
+                    <input  accept="image/png, image/jpeg" class="form-control-file" id="image" type="file" name="image"  %> >
+                </div>  
+                <div class="form-group">
+                    <label class="col-form-label" for="email">Correo electronico *</label>
+                    <input <%= (associate)?'readonly':''%>  value="<%= associate?associate.email: ''%>" placeholder="Correo electronico" class="form-control" type="email" name="email" id="email" required data-parsley-type="email"  >
+                </div>
+                <div class="form-group">
+                    <label class="col-form-label" for="password">Clave *</label>
+                    <input <%= (associate)?'':'required'%> placeholder="clave" class="form-control" id="password" type="password" name="password"  %> data-parsley-minlength="6">
+                </div>
+                <div class="form-group">
+                    <label class="col-form-label" for="dni">R.I.F *</label>
+                    <input value="<%= associate?associate.dni: ''%>"  placeholder="R.I.F" class="form-control" id="dni" type="text" name="dni"  %> required>
+                </div>                
+                <div class="form-group">
+                    <label class="col-form-label" for="address">Domicilio Fiscal</label>
+                    <input value="<%= associate?associate.address: ''%>"  placeholder="Domicilio Fiscal" class="form-control" id="address" type="text" name="address"  %> >
+                </div>
+                <div class="form-group">
+                    <label class="col-form-label" for="phone">Telefono *</label>
+                    <input required value="<%= associate?associate.phone: ''%>"  placeholder="Telefono" class="form-control" id="phone" type="phone" name="phone"  %> data-parsley-minlength="11">
+                </div>  
+                <div class="form-group">
+                    <label class="col-form-label" for="contact">Persona de contacto *</label>
+                    <input required value="<%= associate?associate.contact: ''%>"  placeholder="Persona de contacto" class="form-control" id="contact" type="text" name="contact"  %> >
+                </div> 
+                <div class="form-group">
+                    <label class="col-form-label" for="activity">Actividad Comercial *</label>
+                    <input required value="<%= associate?associate.activity: ''%>"  placeholder="Actividad Comercial" class="form-control" id="activity" type="text" name="activity"  %> >
+                </div> 
+
+                <div class="form-group">
+                    <div class="checkbox c-checkbox">
+                        <label>
+                            <input type="checkbox" name="status" <%= (associate && associate.status=='ACTIVE')?'checked':'' %> >
+                            <span class="fa fa-check"></span> Activo?
+                        </label>
+                 </div>
+                </div>   
+                
+                <input class="form-control" name="type" value="ALLY" type="hidden">
+                <input class="form-control" value="" type="hidden" name="bot">
+                <div class="required">* Campos requeridos</div>
+            </div>
+            <div class="card-footer">
+                <div class="clearfix">
+                    <div class="float-left">
+
+                    </div>
+                    <div class="float-right">
+                        <button class="btn btn-primary" type="submit">Guardar</button>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <!-- END card-->
+        </form>
+    </div>
+</div>

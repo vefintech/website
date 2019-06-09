@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<% include ../layout/head %>
+
+
+<body>
+   <div class="wrapper">
+   <% include ../layout/header_admin %>
+      <% include ../layout/aside %>
+      
+      <!-- Main section-->
+      <section class="section-container">
+      <div class="content-wrapper">
+         <div class="content-heading">
+               <div>Asociados
+                  <small>Editar asociado.</small>
+               </div>
+         </div>
+         <% include ../layout/alert %>
+         <% var url="/admin/asociados/"+associate.uid+"/"+type +"/editar"; %>
+         <% include ally_form %>
+         <% include entrepeneur_form %>
+         <% include personal_form %>
+         <% include legal_form %>
+         
+      </div>
+      
+      </section>
+      <% include ../layout/footer %>
+   </div>
+   <% include ../layout/scripts %>
+   <script >
+      $(document).ready( function () {
+
+         const type = '';
+         switch(type) {
+             case 'PERSONAL':
+                $('#personal-div').show();
+                break;
+             case 'LEGAL':
+                $('#legal-div').show();
+                break; 
+             case 'ENTREPENEUR':
+                $('#entrepreneur-div').show();
+                break;  
+             case 'ALLY':
+                $('#ally-div').show();
+                break;                                                            
+         }         
+
+      } );
+   </script> 
+</body>
+
+</html>

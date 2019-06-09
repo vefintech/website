@@ -1,0 +1,125 @@
+<!--emprendedor-->
+<div id="emprendedor" style="display: none;">
+<form enctype="multipart/form-data" action="/registrar" method="post" >	
+<input class="form-control" name="type" value="ENTREPENEUR" type="hidden">
+<input class="form-control" value="" type="hidden" name="bot">  
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <input type="text" name="names" id="form" style="border-radius: 52px;" placeholder="Nombre y Apellido" class="form-control" onkeypress="return soloLetras(event)" required>
+      </div>
+      <div class="form-group">
+              <label class="col-form-label" id="form">Logo</label>
+              <input requred accept="image/png, image/jpeg" class="form-control-file" id="form" type="file" name="image"   >
+          </div>  
+          <div class="form-group">
+        <input type="email" name="email" id="form" style="border-radius: 52px;" placeholder="Correo electronico" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <input required placeholder="clave" class="form-control" id="form" type="password" name="password"   data-parsley-minlength="6" style="border-radius: 52px;">
+      </div>
+        <div class="form-group">
+        <input type="text" name="city" id="form" style="border-radius: 52px;" placeholder="Ciudad" class="form-control" onkeypress="return soloLetras(event)" required>
+      </div>
+      <div class="form-group">
+        <input type="text" name="nationality" onkeypress="return soloLetras(event)" id="form" style="border-radius: 52px;" placeholder="Nacionalidad" class="form-control" required>
+      </div>
+      
+      <div class="form-group">
+        <input type="text" name="phone" id="form" onkeypress="return isNumberKey(event)" style="border-radius: 52px;" placeholder="Teléfono" class="form-control">
+      </div>
+      <div class="form-group">
+        <input type="text" name="entrepreneurship" onkeypress="return soloLetras(event)" id="form" style="border-radius: 52px;" placeholder="Nombre del Emprendimiento" class="form-control">
+      </div>
+
+    </div>
+    <div class="col-md-6">
+      <div class="form-group">
+              <label class="col-form-label" for="phase">Fase del proyecto *</label>
+              <div class="form-check">
+                  <input checked class="form-check-input" type="radio" required name="phase" id="form" value="Semilla">
+                  <label class="form-check-label" id="form">
+                  Semilla
+                  </label>
+              </div>  
+              <div class="form-check">
+                  <input  class="form-check-input" type="radio" required name="phase" id="form" value="Pruebas">
+                  <label class="form-check-label" id="form">
+                  Pruebas
+                  </label>
+              </div>
+              <div class="form-check">
+                  <input  class="form-check-input" type="radio" required name="phase" id="form" value="En Marcha">
+                  <label class="form-check-label" id="form">
+                  En Marcha
+                  </label>
+              </div> 
+          </div>
+
+      <div class="form-group">
+        <textarea class="form-control" name="services" placeholder="Servicios que Ofreces" rows="5" style="border-radius: 20px;" required>
+        </textarea>
+      </div><br>
+      <div class="form-group" style="width: 50%;" id="form">
+        <h6 style="color: #fff; text-align: left;"> ¿Qué te atrae de la Comunidad de Fintech?</h6>
+      </div>
+      <div class="form-check">
+                <input checked class="form-check-input" type="radio" required name="answer" id="form" value="Quiero promover mis servicios">
+                <label class="form-check-label" id="form">
+                    Quiero promover mis servicios
+                </label>
+            </div>  
+            <div class="form-check">
+                <input  class="form-check-input" type="radio" required name="answer" id="form" value="Me gustaría aportar ideas">
+                <label class="form-check-label" id="form">
+                Me gustaría aportar ideas
+                </label>
+            </div>
+            <div class="form-check">
+                <input  class="form-check-input" type="radio" required name="answer" id="form" value="Quiero colaborar activamente en la Asociación">
+                <label class="form-check-label" id="form">
+                Quiero colaborar activamente en la Asociación
+                </label>
+            </div>
+            <div class="form-check">
+                <input  class="form-check-input" type="radio" required name="answer" id="form" value="Quisiera estar al día con la tecnología">
+                <label class="form-check-label" id="form">
+                Quisiera estar al día con la tecnología
+                </label>
+            </div> 
+            <div class="form-check">
+                <input  class="form-check-input" type="radio" required name="answer" id="form" value="Me gustaría implementar soluciones Fintech a mi proyecto">
+                <label class="form-check-label" id="form">
+                Me gustaría implementar soluciones Fintech a mi proyecto
+                </label>
+            </div>     
+    </div>
+  </div><br>
+  <div class="row">
+    <div class="col-md-12">
+       <div class="form-group">
+            <label class="col-form-label" id="form" style="text-align: justify;">
+          La sociedad Venezolana de FinTech y Nuevas tecnologias, FinTech Venezuela está solicitando sus datos personales para poder comunicarse con uste y responder a su solicitud. Solo usaremos esta información por las razones anteriores, a menos que usted nos dé su consentimiento para usar esta información de otras maneras. Siempre puede recordar su consentimiento, según los Términos y Condiciones.        
+        </label>
+         
+            <div class="checkbox c-checkbox" id="form">
+                <label>
+                    <input required type="checkbox" name="consent" required>
+                    Doy mi consentimiento expresamente informado para el uso de mis datos personales como se describe en la declaración de privacidad de Internet Society.
+                </label>
+            </div>
+        </div>   
+
+    </div>
+  </div>
+  <div class="row">
+      <div class="col-md-12">
+        <center>
+          <div class="form-group" id="boton-objetivos-enviar">
+            <button type="submit" id="button" name="enviar-emprendedor" class="btn btn-md" style="background-color: #ee2a7b; color: #fff; border-radius: 52px; width: 150px; height: 45px; font-weight: bold; ">ENVIAR</button>
+          </div>
+        </center>
+      </div>
+    </div>
+</form>
+</div>        

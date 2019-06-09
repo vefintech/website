@@ -1,0 +1,49 @@
+<div class="row">
+    <div class="col-xl-12">
+        <form method="post" action="<%= url %>" data-parsley-validate="" novalidate="">
+            <!-- START card-->
+            <div class="card card-default">
+            <div class="card-header">
+                <div class="card-title">
+                    <div class="float-right">
+                        <a href="/admin/usuarios" class="card-header-action btn-setting">
+                            <i class="icon-action-undo"></i>
+                        </a>
+                    </div>  
+                </div>                  
+            </div>
+            <div class="card-body">
+                <div class="form-group">
+                    <label class="col-form-label" for="email">Correo electronico *</label>
+                    <input value="<%= user?user.email: ''%>" class="form-control" type="email" name="email" id="email" required data-parsley-type="email" <%= (user)?'readonly':'' %> >
+                </div>
+                <div class="form-group">
+                    <label class="col-form-label" for="password">Clave *</label>
+                    <input class="form-control" id="password" type="password" name="password" <%= (user)?'':'required' %> data-parsley-minlength="6">
+                </div>
+                <div class="form-group">
+                    <div class="checkbox c-checkbox">
+                    <label>
+                        <input type="checkbox" name="status" <%= (user && user.status=='ACTIVE')?'checked':'' %> >
+                        <span class="fa fa-check"></span> Activo?
+                    </label>
+                    </div>
+                </div>
+                <input class="form-control" value="ADMIN" type="hidden" name="rol">
+                <div class="required">* Campos requeridos</div>
+            </div>
+            <div class="card-footer">
+                <div class="clearfix">
+                    <div class="float-left">
+
+                    </div>
+                    <div class="float-right">
+                        <button class="btn btn-primary" type="submit">Register</button>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <!-- END card-->
+        </form>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+
+<div class="list-group mb-3">
+
+<% for(var i=0;i<associates.data.length; i++) {%>
+    <% var item = associates.data[i]; %>
+    <a class="list-group-item" href="/admin/asociados/<%= item.uid %>/<%= item.type %>/ver">
+    <table class="wd-wide">
+        <tbody>
+            <tr>
+                <td class="wd-xs">
+                    <div class="px-2">
+                    <img onerror="this.onerror=null;this.src='/img/user-default.png'" class="img-fluid rounded thumb64" src="<%= item.image==''?'/img/user-default.png':'/img/associates/'+item.image %>" alt="">
+                    </div>
+                </td>
+                <td class="wd-sm d-none d-lg-table-cell">
+                    <div class="px-2">
+                        <h4 class="mb-2"><%= item.names %></h4>
+                        <small class="text-muted"><%= item.email %></small>
+                    </div>
+                </td>
+                <td >
+                    <div class="px-2">
+                        <h4 class="mb-2"><%= item.activity %></h4>
+                    </div>
+                </td>                
+                <td class="wd-sm d-none d-lg-table-cell">
+                    <div class="px-2">
+                        <p class="m-0">Registrado desde</p>
+                        <small class="text-muted"><%= moment(item.created_at).locale("es").fromNow(); %></small>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    </a>
+<% } %>
+</div>

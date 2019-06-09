@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<% include ../layout/head %>
+
+
+<body>
+   <div class="wrapper">
+      <% include ../layout/header_admin %>
+      <% include ../layout/aside %>
+      
+      <!-- Main section-->
+      <section class="section-container">
+      <div class="content-wrapper">
+         <div class="content-heading">
+               <div>Usuarios
+                  <small>Listado de usuarios administradores.</small>
+               </div>
+         </div>
+         <% include ../layout/alert %>
+         
+         <div class="card">
+            <div class="card-header">
+               <div class="card-title">
+               <div class="float-right">
+                 <a href="/admin/usuarios/agregar" class="card-header-action btn-setting">
+                   <i class="icon-plus"></i>
+                 </a>
+               </div> 
+               </div>              
+            </div>
+            <div class="card-body">      
+               <% include list %>
+            </div>
+         </div>         
+      </div>
+      
+      </section>
+      <% include ../layout/footer %>
+   </div>
+   <% include ../layout/scripts %> 
+   <script src="/js/appDataTable.js"></script>  
+   <script >
+
+      $(document).ready( function () {
+         const appDataTable = new AppDataTable('/api/admin/usuarios/admin',
+            [{ "data": "email" },{ "data": "rol" },{ "data": "status" },
+               {
+                  "data": "actions",
+                  "defaultContent": ""
+             }]
+         );
+         var table = appDataTable.initialize();
+         
+         table.on( 'draw.dt', function () {
+            
+            $(".action-delete").click(function(evt) {
+               evt.preventDefault();
+               var href = $(this).attr('href');
+               swal({
+                  title: 'Estas seguro de eliminar?',
+                  text: "No podras revertir esta accion!",
+                  type: 'warning',
+                  showCancelButton: true,
+                  confirmButtonColor: '#3085d6',
+                  cancelButtonColor: '#d33',
+                  cancelButtonText: 'Cancelar!',
+                  confirmButtonText: 'Si, eliminarlo!'
+                }).then((result) => {
+                  if (result.value) {
+                     window.location.href =href;
+                  }
+                })               
+           });
+
+         } );
+
+         table.on('xhr.dt', function ( e, settings, json, xhr ) {
+            for ( var i=0; i<json.data.length ; i++ ) {
+               json.data[i].email = "<a  href='/admin/usuarios/"+json.data[i].uid+"/editar'>"+json.data[i].email+"</a>";
+               json.data[i].actions = "<a class='action-delete mb-1 btn btn-danger' href='/admin/usuarios/"+json.data[i].uid+"/eliminar'><i class='icon-trash' ></i></a>";
+            }
+
+           
+         }); 
+         
+
+
+      } );
+      
+
+
+   </script>  
+
+</body>
+
+</html>

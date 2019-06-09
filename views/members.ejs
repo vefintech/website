@@ -1,0 +1,12 @@
+<div class="row"> 
+    <% for(var i=0;i<members.length; i++) {%>
+    <% const item = members[i] %>
+        <% if (item.type!='PERSONAL') {%>
+            <div class="col-xl-3 col-md-4 text-center" >
+                <div style="height: 70px; ">
+                    <img onerror="this.onerror=null;this.src='/img/user-default.png'" class="thumb64" src="<%= item.image==''?'/img/user-default.png':'/img/associates/'+item.image %>" alt="<%= item.names %>">
+                </div>
+            </div>
+        <% } %>
+    <% } %>    
+</div>

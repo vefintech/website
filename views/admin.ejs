@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<% include ./layout/head %>
+
+
+<body>
+   <div class="wrapper">
+      <% include ./layout/header_admin %>
+      <% include ./layout/aside %>
+      
+      <!-- Main section-->
+      <section class="section-container">
+         <div class="content-wrapper">
+            <!-- START cards box-->
+            <div class="row">
+              <% for(var i=0;i<stats.length; i++) {%>
+                <% const item = stats[i] %>
+               <div class="col-xl-3 col-md-6">
+                  <!-- START card-->
+                  <div class="card flex-row align-items-center align-items-stretch border-0">
+                     <div class="col-4 d-flex align-items-center bg-<%= item.color %>-dark justify-content-center rounded-left">
+                        <em class="<%= item.icon %> fa-3x"></em>
+                     </div>
+                     <div class="col-8 py-3 bg-<%= item.color %> rounded-right">
+                        <div class="h2 mt-0"><%= item.n %></div>
+                        <div class="text-uppercase"><%= item.name  %></div>
+                     </div>
+                  </div>
+               </div>
+               <% } %>
+            </div>
+            <div class="card">
+               <div class="card-header">
+                  <div class="float-right">
+                     <a href="/admin/asociados" class="card-header-action btn-setting">
+                        <i class="icon-reload"></i>
+                     </a>
+                  </div>                
+                  Ultimos 5 registrados
+               </div> 
+               <div class="card-body">
+               <% include ./associates/list %>
+               </div>                    
+            </div>
+            
+            
+            <!-- END cards box-->
+         </div>                  
+      </section>
+      <% include ./layout/footer %>
+   </div>
+   <% include ./layout/scripts %>
+</body>
+
+</html>

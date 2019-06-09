@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<% include ./layout/head %>
+
+
+<body>
+
+   <div class="wrapper">
+      <div class="abs-center wd-xl">
+      <!-- START card-->
+         <div class="text-center mb-4">
+            <div class="text-lg mb-3">FELICIDADES</div>
+            <p class="lead m-0">Haz sido registrado satisfactoriamente en nuestra plataforma.</p>
+            <p >Hemos enviado un email a <strong><%= associate.email %></strong> donde encontraras las instrucciones para finalizar el registro.</p>
+         </div>
+         <ul class="list-inline text-center text-sm mb-4">
+            <li class="list-inline-item">
+               <a class="text-muted" href="/">Inicio</a>
+            </li>
+            <li class="text-muted list-inline-item">|</li>
+            <li class="list-inline-item">
+               <a class="text-muted" href="javascript:history.go(-1)">Volver</a>
+            </li>             
+            <li class="text-muted list-inline-item">|</li>
+            <li class="list-inline-item">
+               <a class="text-muted" href="/auth/signIn">Login</a>
+            </li>
+         </ul>
+         <% include ./layout/min_footer %>
+   </div>
+<% include ./layout/scripts %>
+
+</html>

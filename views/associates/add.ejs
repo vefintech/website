@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<% include ../layout/head %>
+
+
+<body>
+   <div class="wrapper">
+      <% include ../layout/header_admin %>
+      <% include ../layout/aside %>
+      
+      <!-- Main section-->
+      <section class="section-container">
+      <div class="content-wrapper">
+         <div class="content-heading">
+               <div>Asociados
+                  <small>Agregar asociado.</small>
+               </div>
+         </div>
+         <% include ../layout/alert %>
+         <% var url="/admin/asociados/agregar"; %>
+         <div class="card card-default">
+            <div class="card-header">
+               <div class="card-title">
+                  <div class="float-right">
+                        <a href="/admin/asociados" class="card-header-action btn-setting">
+                           <i class="icon-action-undo"></i>
+                        </a>
+                  </div> 
+                  <div class="text-center"  >
+                  <div class="btn-group" role="group" >
+                  <button  data-type="PERSONAL" type="button" class="btn btn-secondary  btn-asociado">Personal</button>
+                  <button  data-type="LEGAL" type="button" class="btn btn-secondary  btn-asociado">Legal</button>
+                  <button  data-type="ENTREPENEUR" type="button" class="btn btn-secondary  btn-asociado">Emprendedor</button>
+                  <button  data-type="ALLY" type="button" class="btn btn-secondary  btn-asociado">Aliado</button>
+                  </div>         
+               </div >                     
+               </div>                  
+            </div>
+            <div class="card-body">
+          
+            </div>  
+         </div>           
+
+
+         <% include ally_form %>
+         <% include entrepeneur_form %>
+         <% include personal_form %>
+         <% include legal_form %>
+         
+      </div>
+      
+      </section>
+      <% include ../layout/footer %>
+   </div>
+   <% include ../layout/scripts %>
+   <script >
+      $(document).ready( function () {
+
+         $(".btn-asociado").on('click',function(evt) {
+              $(".btn-asociado").removeClass('active');
+              $(this).addClass('active');
+
+              $('#entrepreneur-div').hide();
+              $('#ally-div').hide();
+              $('#personal-div').hide();
+              $('#legal-div').hide();
+
+              $('#entrepreneur-form')[0].reset();
+              $('#ally-form')[0].reset();
+              $('#personal-form')[0].reset();
+              $('#legal-form')[0].reset();
+
+              const type = $(this).data('type');
+              switch(type) {
+                  case 'PERSONAL':
+                     $('#personal-div').show();
+                     break;
+                  case 'LEGAL':
+                     $('#legal-div').show();
+                     break; 
+                  case 'ENTREPENEUR':
+                     $('#entrepreneur-div').show();
+                     break;  
+                  case 'ALLY':
+                     $('#ally-div').show();
+                     break;                                                            
+              }
+
+         })
+
+
+      } );
+   </script> 
+</body>
+
+</html>

@@ -1,0 +1,103 @@
+<div class="row" id="personal-div" style="display:<%= associate?(associate.type=='PERSONAL'?'block':'none'):'none'%>" >
+    <div class="col-xl-12">
+        <form enctype="multipart/form-data" id="personal-form" method="post" action="<%= url %>" data-parsley-validate="" novalidate="">
+            <!-- START card-->
+            <div class="card card-default">
+
+            <div class="card-body">
+                <div class="form-group">
+                    <label class="col-form-label" for="names">Nombres y apellidos *</label>
+                    <input value="<%= associate?associate.names: ''%>" placeholder="Nombres y apellidos" class="form-control" id="names" type="text" name="names"  data-parsley-minlength="10" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-form-label" for="email">Correo electronico *</label>
+                    <input <%= (associate)?'readonly':''%>  value="<%= associate?associate.email: ''%>" placeholder="Correo electronico" class="form-control" type="email" name="email" id="email" required data-parsley-type="email"  >
+                </div>
+                <div class="form-group">
+                    <label class="col-form-label" for="password">Clave *</label>
+                    <input <%= (associate)?'':'required'%> placeholder="clave" class="form-control" id="password" type="password" name="password"  %> data-parsley-minlength="6">
+                </div>
+                <div class="form-group">
+                    <label class="col-form-label" for="city">Ciudad *</label>
+                    <input value="<%= associate?associate.city: ''%>"  placeholder="Ciudad" class="form-control" id="city" type="text" name="city"  %> required>
+                </div>
+                <div class="form-group">
+                    <label class="col-form-label" for="nationality">Nacionalidad *</label>
+                    <input value="<%= associate?associate.nationality: ''%>"  placeholder="Nacionalidad" class="form-control" id="nationality" type="text" name="nationality"  %> required>
+                </div>
+                <div class="form-group">
+                    <label class="col-form-label" for="phone">Telefono</label>
+                    <input value="<%= associate?associate.phone: ''%>"  placeholder="Telefono" class="form-control" id="phone" type="phone" name="phone"  %> data-parsley-minlength="11">
+                </div>  
+                <div class="form-group">
+                    <label class="col-form-label" for="birthdate">Fecha de nacimiento</label>
+                    <input value="<%= associate?associate.birthdate: ''%>"  placeholder="Telefono" class="form-control" id="birthdate" type="date" name="birthdate"  %> >
+                </div>
+                <div class="form-group">
+                    <label class="col-form-label" for="answer">Que te atrae de la comunidad Fintech*?</label>
+                    <div class="form-check">
+                        <input <%= associate?associate.answer=='Soy entusiasta de la Nuevas Tecnologías'?'checked': '': 'checked'%> class="form-check-input" type="radio" name="answer" id="answer_1" value="Soy entusiasta de la Nuevas Tecnologías">
+                        <label class="form-check-label" for="answer_1">
+                            Soy entusiasta de la Nuevas Tecnologías
+                        </label>
+                    </div>  
+                    <div class="form-check">
+                        <input <%= associate?associate.answer=='Estudiante de Tecnología'?'checked': '': ''%> class="form-check-input" type="radio" name="answer" id="answer_2" value="Estudiante de Tecnología">
+                        <label class="form-check-label" for="answer_2">
+                          Estudiante de Tecnología
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input <%= associate?associate.answer=='Usuario'?'checked': '': ''%> class="form-check-input" type="radio" name="answer" id="answer_3" value="Usuario">
+                        <label class="form-check-label" for="answer_3">
+                          Usuario
+                        </label>
+                    </div> 
+                    <div class="form-check">
+                        <input <%= associate?associate.answer=='Comunidad en General'?'checked': '': ''%> class="form-check-input" type="radio" name="answer" id="answer_4" value="Comunidad en General">
+                        <label class="form-check-label" for="answer_4">
+                          Comunidad en General
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input <%= associate?associate.answer=='Comerciante informal'?'checked': '': ''%> class="form-check-input" type="radio" name="answer" id="answer_5" value="Comerciante informal>
+                        <label class="form-check-label" for="answer_5">
+                          Comerciante informal
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input <%= associate?associate.answer=='Quiero promover el uso de las tecnologías'?'checked': '': ''%> class="form-check-input" type="radio" name="answer" id="answer_6" value="Quiero promover el uso de las tecnologías">
+                        <label class="form-check-label" for="answer_6">
+                            Quiero promover el uso de las tecnologías
+                        </label>
+                    </div>  
+                </div>
+                <div class="form-group">
+                    <div class="checkbox c-checkbox">
+                        <label>
+                            <input type="checkbox" name="status" <%= (associate && associate.status=='ACTIVE')?'checked':'' %> >
+                            <span class="fa fa-check"></span> Activo?
+                        </label>
+                 </div>
+                </div>   
+                
+                <input class="form-control" name="type" value="PERSONAL" type="hidden">
+                <input class="form-control" value="" type="hidden" name="bot">
+                <div class="required">* Campos requeridos</div>
+            </div>
+            <div class="card-footer">
+                <div class="clearfix">
+                    <div class="float-left">
+
+                    </div>
+                    <div class="float-right">
+                        <button class="btn btn-primary" type="submit">Guardar</button>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <!-- END card-->
+        </form>
+    </div>
+</div>
