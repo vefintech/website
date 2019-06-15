@@ -17,7 +17,7 @@
             </a>
          </li>
 
-         <% if ( userLog.rol=='USER') {%>
+         <% if (authenticated && userLog.rol=='USER') {%>
          <li class=" <%= activeMenu.updateData==true?'active':'' %>">
             <a href="/admin/asociados/actualizar" title="Actualizar datos">
                <em class="fas fa-address-card"></em>
@@ -26,7 +26,7 @@
          </li> 
          <%}%>        
 
-         <% if (userLog.rol=='ADMIN') {%>
+         <% if (authenticated && userLog.rol=='ADMIN') {%>
             <li class=" <%= activeMenu.users==true?'active':'' %>">
                <a href="/admin/usuarios" title="Usuarios">
                   <em class="fas fa-user-friends"></em>

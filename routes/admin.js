@@ -11,6 +11,11 @@ const service = require('../services/asocciate');
 router.get('/', 
 ensureLoggedIn('/auth/signIn'),
 function(req, res, next) {
+  res.locals.authenticated = false;
+  if (req.user) {
+    res.locals.authenticated =  true;
+  }
+    
   service.indicators()
     .then(function(data) {   
       service.search({page: 1, limit: 5,q: '',type: ''})

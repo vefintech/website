@@ -24,11 +24,17 @@ module.exports = {
 
         return optionsMenu;
     } ,
-    validateRol(user, rol,req,res) {
+    validateRol: function(user, rol,req,res) {
         if (user.rol!=rol) {
             var e = new Error("Acceso prohibido");
             e.status= 401;
             throw e;
         }
-    }   
+    },
+    setLocalUser: function(res) {
+        res.locals.authenticated = false;
+        if (req.user) {
+          res.locals.authenticated =  true;
+        }
+      }       
 }
