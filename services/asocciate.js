@@ -1,6 +1,6 @@
 const Sequelize = require('sequelize');
 const Op = require('sequelize').Op;
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const User = require('../models/User.js')();
 const Personal = require('../models/Personal.js')();
 const Legal = require('../models/Legal.js')();

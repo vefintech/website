@@ -1,6 +1,6 @@
 'use strict';
 const uuidv1 = require('uuid/v1');
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const Sequelize = require('sequelize');
 
 const database = require('../config/connection.js');
