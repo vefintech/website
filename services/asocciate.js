@@ -27,6 +27,10 @@ module.exports = {
         let rel;
         switch (reqData.type) {
             case 'PERSONAL':
+                if (reqData.birthdate===null || reqData.birthdate==='') {
+                    reqData.birthdate='1970-01-01';
+                }
+
                 rel = {
                     names: reqData.names,
                     birthdate: reqData.birthdate,		
@@ -119,6 +123,10 @@ module.exports = {
         let rel;
         switch (reqData.type) {
             case 'PERSONAL':
+                if (reqData.birthdate===null || reqData.birthdate==='') {
+                    reqData.birthdate='1970-01-01';
+                }
+
                 rel = {email: reqData.email ,
                     names: reqData.names,
                     birthdate: reqData.birthdate,		
