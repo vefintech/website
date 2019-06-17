@@ -49,8 +49,9 @@ app.use(function(req, res, next) {
   res.locals.authenticated = false;
   if (req.user) {
     res.locals.authenticated =  true;
+    res.locals.user =  req.user;
+    res.locals.userLog =  req.user;
   }
-  console.log(res.locals);
   next();
   
 });
