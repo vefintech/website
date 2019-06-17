@@ -45,14 +45,6 @@ app.use(passport.session());
 app.use(flash());
 require('./security/passport');
 
-app.use('/', indexRouter);
-app.use('/admin', adminRouter);
-app.use('/admin/usuarios',usersRouter);
-app.use('/admin/asociados',associatesRouter);
-app.use('/auth', auth);
-
-app.use('/api/admin/usuarios',usersApi);
-
 app.use(function(req, res, next) {
   res.locals.authenticated = false;
   if (req.user) {
@@ -62,8 +54,19 @@ app.use(function(req, res, next) {
   
 });
 
+app.use('/', indexRouter);
+app.use('/admin', adminRouter);
+app.use('/admin/usuarios',usersRouter);
+app.use('/admin/asociados',associatesRouter);
+app.use('/auth', auth);
+
+app.use('/api/admin/usuarios',usersApi);
+
+
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
+  console.log("2");
   res.locals.authenticated = false;
   if (req.user) {
     res.locals.authenticated =  true;
@@ -74,6 +77,8 @@ app.use(function(req, res, next) {
 
 // error handler
 app.use(function(err, req, res, next) {
+  console.log("3");
+
   // set locals, only providing error in development
   res.locals.status = err.status;
   res.locals.message = err.message;
