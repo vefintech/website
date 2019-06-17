@@ -50,6 +50,7 @@ app.use(function(req, res, next) {
   if (req.user) {
     res.locals.authenticated =  true;
   }
+  console.log(res.locals);
   next();
   
 });
