@@ -15,7 +15,7 @@ router.get('/',
 ensureLoggedIn('/auth/signIn'),
 function(req, res, next) {
 
-  utils.setLocalUser(res);
+  utils.setLocalUser(res,req);
 
   const searchData = {
     page: req.query.page?(req.query.page):1,
@@ -45,7 +45,7 @@ function(req, res, next) {
 router.get('/:id/:type/ver', 
 ensureLoggedIn('/auth/signIn'),
 function(req, res, next) {
-  utils.setLocalUser(res);
+  utils.setLocalUser(res,req);
 
   const reqData = {uid: req.params.id, type: req.params.type};
   service.get(reqData)
@@ -66,7 +66,7 @@ function(req, res, next) {
 router.get('/agregar', 
 ensureLoggedIn('/auth/signIn'),
 function(req, res, next) {
-  utils.setLocalUser(res);
+  utils.setLocalUser(res,req);
   utils.validateRol(req.user,'ADMIN');
   res.render('associates/add', {activeMenu: activeMenu,action: 'add',associate: null});
 });
@@ -74,7 +74,7 @@ function(req, res, next) {
 router.post('/agregar', 
 ensureLoggedIn('/auth/signIn'),
 function(req, res, next) {
-  utils.setLocalUser(res);
+  utils.setLocalUser(res,req);
   utils.validateRol(req.user,'ADMIN');
   var o = {image: ''};
   var form = new formidable.IncomingForm();
@@ -126,7 +126,7 @@ function(req, res, next) {
 router.get('/:id/:type/editar', 
 ensureLoggedIn('/auth/signIn'),
 function(req, res, next) {
-  utils.setLocalUser(res);
+  utils.setLocalUser(res,req);
   utils.validateRol(req.user,'ADMIN');
   const reqData = {uid: req.params.id, type: req.params.type};
 
@@ -151,7 +151,7 @@ function(req, res, next) {
 router.post('/:id/:type/editar', 
 ensureLoggedIn('/auth/signIn'),
 function(req, res, next) {
-  utils.setLocalUser(res);
+  utils.setLocalUser(res,req);
   utils.validateRol(req.user,'ADMIN');
   var o = {image: ''};
   var form = new formidable.IncomingForm();
@@ -207,7 +207,7 @@ function(req, res, next) {
 router.get('/:id/:type/eliminar', 
 ensureLoggedIn('/auth/signIn'),
 function(req, res, next) {
-  utils.setLocalUser(res);
+  utils.setLocalUser(res,req);
   utils.validateRol(req.user,'ADMIN');
   const reqData = {uid: req.params.id, type: req.params.type};
 
@@ -242,7 +242,7 @@ function(req, res, next) {
 router.get('/actualizar', 
 ensureLoggedIn('/auth/signIn'),
 function(req, res, next) {
-  utils.setLocalUser(res);
+  utils.setLocalUser(res,req);
   utils.validateRol(req.user,'USER');
   activeMenu= utils.getActiveMenu("updateData");
   service.getById(req.user.id)
@@ -265,7 +265,7 @@ function(req, res, next) {
 router.post('/actualizar', 
 ensureLoggedIn('/auth/signIn'),
 function(req, res, next) {
-  utils.setLocalUser(res);
+  utils.setLocalUser(res,req);
   utils.validateRol(req.user,'USER');
   activeMenu= utils.getActiveMenu("updateData");
   service.getById(req.user.id)
@@ -328,7 +328,7 @@ function(req, res, next) {
 router.get('/excel', 
 ensureLoggedIn('/auth/signIn'),
 function(req, res, next) {
-  utils.setLocalUser(res);
+  utils.setLocalUser(res,req);
   service.search({page:1, limit: 999999, q: '', type: ''})
     .then(function(data) {
      
