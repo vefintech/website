@@ -11,7 +11,6 @@ const activeMenu= utils.getActiveMenu("users");
 router.get('/', 
 ensureLoggedIn('/auth/signIn'),
 function(req, res, next) {
-  utils.setLocalUser(res,req);
   utils.validateRol(req.user,'ADMIN');
   res.render('users/index', {activeMenu: activeMenu,users:[]});
 
@@ -20,7 +19,6 @@ function(req, res, next) {
 router.get('/agregar', 
 ensureLoggedIn('/auth/signIn'),
 function(req, res, next) {
-  utils.setLocalUser(res,req);
   utils.validateRol(req.user,'ADMIN');
   res.render('users/add', {activeMenu: activeMenu,user: null});
 });
@@ -28,7 +26,6 @@ function(req, res, next) {
 router.post('/agregar', 
 ensureLoggedIn('/auth/signIn'),
 function(req, res, next) {
-  utils.setLocalUser(res,req);
   utils.validateRol(req.user,'ADMIN');
   const o = req.body;
   if (o.status=='on' || o.status==true || o.status=='true' ) {
@@ -58,7 +55,6 @@ function(req, res, next) {
 router.get('/:id/editar', 
 ensureLoggedIn('/auth/signIn'),
 function(req, res, next) {
-  utils.setLocalUser(res,req);
   utils.validateRol(req.user,'ADMIN');
   service.get(req.params.id).then(function(data) {
     if (!data.success) {
@@ -78,7 +74,6 @@ function(req, res, next) {
 router.post('/:id/editar', 
 ensureLoggedIn('/auth/signIn'),
 function(req, res, next) {
-  utils.setLocalUser(res,req);
   utils.validateRol(req.user,'ADMIN');
   const o = req.body;
   if (o.status=='on' || o.status==true || o.status=='true' ) {
@@ -107,7 +102,6 @@ function(req, res, next) {
 router.get('/:id/eliminar',
 ensureLoggedIn('/auth/signIn'),
  function(req, res, next) {
-  utils.setLocalUser(res,req);
   utils.validateRol(req.user,'ADMIN');
   if (req.user.id==req.params.id) {
     var e = new Error("Acceso prohibido. No puedes eliminarte a ti mismo");

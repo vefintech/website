@@ -31,7 +31,7 @@ module.exports = {
             throw e;
         }
     },
-    setLocalUser: function(res) {
+    setLocalUser: function(res,req) {
         res.locals.authenticated = false;
         if (req.user) {
           res.locals.authenticated =  true;

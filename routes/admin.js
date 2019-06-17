@@ -11,8 +11,6 @@ const service = require('../services/asocciate');
 router.get('/', 
 ensureLoggedIn('/auth/signIn'),
 function(req, res, next) {
-  utils.setLocalUser(res,req);
-    
   service.indicators()
     .then(function(data) {   
       service.search({page: 1, limit: 5,q: '',type: ''})
