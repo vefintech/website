@@ -10,7 +10,7 @@
         <div class="col-md-2">
           <center>
             <a href="/">
-              <img src="imagenes/logo/logo.png" class="img-fluid">
+              <img src="img/logo/logo.png" class="img-fluid">
             </a>
           </center>
         </div>
@@ -38,11 +38,11 @@
         <div class="col-md-2">
             <% if (authenticated) {%>
             <div style="margin-top: 10px;">
-              <a href="/auth/signOut" class="btn btn-sm" style="background-color: #ee2a7b; color: #fff; border-radius: 52px; width: 50%; font-weight: bold; ">SALIR</a>
+              <a href="/auth/signOut" class="btn btn-sm" style="background-color: #ee2a7b; color: #fff; border-radius: 52px; width: 80%; font-weight: bold; ">SALIR</a>
             </div>         
             <% }else { %>
             <div style="margin-top: 10px;">
-              <a href="/auth/signIn"  class="btn btn-sm" style="background-color: #ee2a7b; color: #fff; border-radius: 52px; width: 50%; font-weight: bold; ">INGRESAR</a>
+              <a href="/auth/signIn"  class="btn btn-sm" style="background-color: #ee2a7b; color: #fff; border-radius: 52px; width: 80%; font-weight: bold; ">INGRESAR</a>
             </div>                         
             <% } %> 
         </div>
@@ -61,7 +61,7 @@
         <div class="row" style="padding-top: 20px; padding-bottom: 20px;">
           <div class="col-md-4" style="border-right: 1px solid #ee2a7b; padding-top: 5px;">
             <center>
-              <img src="imagenes/footer/footer.png" class="img-fluid">
+              <img src="img/footer/footer.png" class="img-fluid">
             </center>
             <div class="row">
               <div class="col-md-12" >
@@ -76,21 +76,20 @@
             </div>
           </div>					
           <div class="col-md-4 text-center" style="border-right: 1px solid #ee2a7b; padding-top: 5px;">
-               <ul class="nav navbar-nav w-100 justify-content-center">
-                          <li class="nav-item"> <a class="nav-link" href="/" style="color: #383838;   font-weight: bold; margin:2px; font-size: 14px; "><h7> INICIO</h7></a>
-                          </li>
-                          <li class="nav-item"> <a class="nav-link" href="/#nosotros" style="color: #383838; font-weight: bold; margin:2px; font-size: 14px;"><h7>QUIÉNES SOMOS</h7></a>
-                          </li>
-                          <li class="nav-item"> <a class="nav-link" href="/#objetivos" style="color: #383838; font-weight: bold; margin:2px; font-size: 14px;"><h7>OBJETIVOS</h7></a>
-                          </li>
-                          <li class="nav-item"> <a class="nav-link" href="/#afiliados" style="color: #383838; font-weight: bold; margin:2px; font-size: 14px;"><h7>MIEMBROS</h7></a>
-                          </li>
-                          <li class="nav-item"> <a class="nav-link" href="/afiliados" style="color: #383838; font-weight: bold; margin:2px; font-size: 14px;"><h7>AFILIADOS</h7></a>
-                          </li>                          
-                          <li class="nav-item"> <a class="nav-link" href="/#novedades" style="color: #383838; font-weight: bold; margin:2px; font-size: 14px; "><h7>NOVEDADES</h7></a>
-                          </li>
-                          
-                      </ul>
+            <ul class="nav navbar-nav w-100 justify-content-center">
+              <li class="nav-item"> <a class="nav-link" href="/#inicio" style="color: #383838;   font-weight: bold; margin:2px; font-size: 14px; "><h7>INICIO</h7></a>
+              </li>
+              <li class="nav-item"> <a class="nav-link" href="/#nosotros" style="color: #383838; font-weight: bold; margin:2px; font-size: 14px;"><h7>QUIÉNES SOMOS</h7></a>
+              </li>
+              <li class="nav-item"> <a class="nav-link" href="/#objetivos" style="color: #383838; font-weight: bold; margin:2px; font-size: 14px;"><h7>OBJETIVOS</h7></a>
+              </li>
+              <li class="nav-item"> <a class="nav-link" href="/#afiliados" style="color: #383838; font-weight: bold; margin:2px; font-size: 14px;"><h7>PATROCINADORES</h7></a>
+              </li>
+              <li class="nav-item"> <a class="nav-link" href="/afiliados" style="color: #383838; font-weight: bold; margin:2px; font-size: 14px;"><h7>MIEMBROS</h7></a>
+              </li>                          
+              <li class="nav-item"> <a class="nav-link" href="/#novedades" style="color: #383838; font-weight: bold; margin:2px; font-size: 14px; "><h7>NOVEDADES</h7></a>
+              </li>                          
+          </ul>
                       <div class="row">
                         <div class="col-md-12" style="margin-top: 5px;">
                           <a href="https://commerce.coinbase.com/checkout/74f7177a-2ea2-4304-ad88-ffebc2fb8fc1" class="btn btn-lg" target="_blank" style="background-color: #f7931a; border-radius: 52px; font-weight: bold; color: #fff;">DONA EN <i class="fab fa-btc"></i></a>
@@ -134,16 +133,7 @@
       </div>
     </div>
   </div>
-
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-12">
-        <p style="text-align: center;">Derechos reservado fintech 2018 | hecho con <i class="fas fa-heart" style="color: #ee2a7b"></i> amor por sus promotores |</p>
-        <p style="text-align: center;">Ésta página es creada gracias a DashBoost <a href="https://www.dashboost.org" target="_blank">https://www.dashboost.org</a> sitemap, terminos y condiciones.</p>
-
-      </div>
-    </div>
-  </div>
-   <% include ./layout/scripts_index %> 
+  <% include footer_index %> 
+  <% include ./layout/scripts_index %> 
   </body>
 </html>

@@ -18,15 +18,14 @@ font-family: 'Raleway', sans-serif;
   margin-bottom: 30px;
   font-size: 16px;
 }
-h1,h2,h3,h4,h5,h6{
 
+h1,h2,h3,h4,h5,h6{
       font-weight: bold;
       color: #383838;
 }
 
 
 #estilo{
-
   background-color: #EE2A7B;
   height: 5px;
   width:50px;
@@ -38,19 +37,16 @@ h1,h2,h3,h4,h5,h6{
 .principios {
    margin-top: 30px;
   font-size: 16px;
-
 }
 
 /*--banner start here--*/
 .banner {
-
-  background: url(../imagenes/slider/slider.jpg);
+  background: url(../img/slider/slider.jpg);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   height: 100vh;
   width: 100%;
-
 }
 
 .header {
@@ -58,61 +54,40 @@ h1,h2,h3,h4,h5,h6{
 }
 
 
-#bloque1{
-
+#bloque1  {
   margin-bottom: 20px;
 }
 
-#bloque1-imagen
-{
-
+#bloque1-imagen {
    margin-top: 80px;
-
    width: 693px;
 }
 
 
 #quienes-somos{
-
-
    padding-top: 80px;
    text-align: center;
    padding-bottom: 80px;
 }
 
 #bloque2 {
-
     border: 1px solid #000;
-
-
 }
 
-
-#img
-{
-
- background: url(../imagenes/bloque2/2.jpg);
-
+#img  {
+ background: url(../img/bloque2/2.jpg);
 }
 
-#img
-{
-
- background: url(../imagenes/bloque2/2.jpg);
+#img  {
+ background: url(../img/bloque2/2.jpg);
  }
 
-#img2
-{
-
- background: url(../imagenes/bloque2/1.jpg);
- 
+#img2 {
+ background: url(../img/bloque2/1.jpg);
 }
 
-
-
 #bloque4 {
-
-  background: url(../imagenes/bloque4/bloque4.jpg);
+  background: url(../img/bloque4/bloque4.jpg);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -121,8 +96,7 @@ h1,h2,h3,h4,h5,h6{
 }
 
 #bloque3 {
-
-  background: url(../imagenes/bloque3/bloque3.jpg);
+  background: url(../img/bloque3/bloque3.jpg);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -131,36 +105,29 @@ h1,h2,h3,h4,h5,h6{
 }
 
 #afiliados {
-
   padding-top: 40px;
   padding-bottom: 80px;
 }
 
-#bloque4
-{
+#bloque4  {
   padding-top: 50px;
   padding-bottom: 50px;
 }
 
-.objetivos{
-
+.objetivos  {
   margin-top: 40px;
-
 }
 
 #objetivos {
-
   height: 100%;
 }
 
-#fila-objetivos{
-
+#fila-objetivos { 
   padding-top: 50px;
   padding-bottom: 60px;
-  
 }
 
-.col-centrada{
+.col-centrada {
     float: none;
     margin: 0 auto;
 }
@@ -170,18 +137,16 @@ h1,h2,h3,h4,h5,h6{
     margin: 0 auto;
 }
 
-.col-right{
+.col-right  {
     float: right;
     margin: 0 auto;
 }
 
-
-#estilo-objetivos{
+#estilo-objetivos {
     background-color: #EE2A7B;
    height: 5px;
   width:50px;
 }
-
 
 .estilo-miembros{
     background-color: #EE2A7B;
@@ -191,18 +156,15 @@ h1,h2,h3,h4,h5,h6{
 
 }
 
-
 .objetivos-3 {
   text-align: center;
 }
 
 #form{
-
   font-size: 15px;
 }
 
 #redes-sociales {
-
     background: #EE2A7B;
     font-size: 16px;
     border-radius: 30px;
@@ -215,13 +177,10 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .estilo-novedades {
-
   background-color: #0072B3;
-
-   height: 5px;
+  height: 5px;
   width:50px;
   margin-bottom: 20px;
-
 }
 
 #p-objetivos{
@@ -230,19 +189,16 @@ h1,h2,h3,h4,h5,h6{
 }
 
 #natural{
-
   margin-left: 40px;
   margin-right: 40px;
 }
 
 #aliado {
-
   margin-left: 40px;
   margin-right: 40px;
 }
 
 #juridica{
-
   margin-left: 40px;
   margin-right: 40px;
 }
@@ -261,8 +217,7 @@ h1,h2,h3,h4,h5,h6{
 .blog .carousel-indicators {
   left: 0;
   top: auto;
-    bottom: -40px;
-
+  bottom: -40px;
 }
 
 /* The colour of the indicators */
@@ -279,34 +234,25 @@ h1,h2,h3,h4,h5,h6{
 
 
 #p-objetivos {
-
     /* para separacion entre palabras */   
     line-height: 18pt; 
     hyphens: none;
-     text-align: center;
-
-     white-space: pre-line;
-
+    text-align: center;
+    white-space: pre-line;
 }
 
 .card-text{
-
   margin-top: 20px;
   margin-bottom: 20px;
 }
 
 .radio {
-
     margin: 15px;
 }
 
 #unete {
-
       margin-top:-12px;
-    }
-
-
-
+}
 
 @media only screen and (max-width: 1200px) {
     /* For mobile phones: */
@@ -314,17 +260,11 @@ h1,h2,h3,h4,h5,h6{
         height: 100%;
     }
 
-
-    
     #objetivos-3 {
-
       width: 100px;
       height: 100px;
-    }
-
-    
+    }    
 }
-
 
 @media only screen and (max-width: 1024px) {
     /* For mobile phones: */
@@ -333,18 +273,14 @@ h1,h2,h3,h4,h5,h6{
     }
 
     .header {
-
       font-size: 12px;
     }
 
     .nav-link {
-
             font-size: 12px;
-
     }
 
     #objetivos-3 {
-
       height: 100px;
       width: 100px;
     }
@@ -352,19 +288,13 @@ h1,h2,h3,h4,h5,h6{
     #p-objetivos{
       font-size: 12px;
     }
-
-    
-   
 }
-
 
 @media only screen and (max-width: 640px) {
     /* For mobile phones: */
     .banner {
         height: 100%;
     }
-
-  
 }
 
 @media only screen and (max-width: 992px) {
@@ -374,12 +304,8 @@ h1,h2,h3,h4,h5,h6{
     }
 
      #img,#img2{
-
-       display: none;
-
-
+      display: none;
     }
-
     
     #unete{
       margin: 0px;
@@ -395,7 +321,6 @@ h1,h2,h3,h4,h5,h6{
 
     }
     #emprendedor{
-
       margin:0px;
       padding: 0px;
 
@@ -406,36 +331,29 @@ h1,h2,h3,h4,h5,h6{
 
     }
 }
+
 @media only screen and (max-width: 800px) {
 
-
       #img{
-
        height: 100%;
        width: 100%;
        display: block;
-
-
     }
-    #objetivos-3 {
 
+    #objetivos-3 {
       height: 100px;
       width: 100px;
-    }
-
-   
+    }   
 }
 
 @media only screen and (max-width: 720px) {
 
     #objetivos-3 {
-
       height: 100px;
       width: 100px;
     }
 
     #div1,#div2,#div3{
-
         margin: 6px
     }
     
@@ -444,20 +362,14 @@ h1,h2,h3,h4,h5,h6{
 @media only screen and (max-width: 640px) {
 
     #objetivos-3 {
-
       height: 100px;
       width: 100px;
     }
 
     #caja-unete{
-
       margin: 6px;
     }
-
-
 }
-
-
 
 @media only screen and (max-width: 480px) {
     /* For mobile phones: */
@@ -466,12 +378,9 @@ h1,h2,h3,h4,h5,h6{
     }
 
     #img,#img2{
-
        display: none;
-
     }
 
-    
     #caja-unete{
 
       margin: 6px;
@@ -480,46 +389,32 @@ h1,h2,h3,h4,h5,h6{
 
       height: 80px;
       width: 80px;
-    }
-     
+    }     
 }
-
 
 @media only screen and (max-width: 320px) {
 
     #objetivos-3 {
-
       height: 80px;
       width: 80px;
-    }
-
-    
+    }    
 }
 
-
 #redes-sociales:hover {
-    background: #068edc; 
+  background: #068edc; 
   transition: all 225ms ease-in 0s; 
 }
 
-
-
 .nav-link :hover {
-      padding-bottom: 6px;
-
+  padding-bottom: 6px;
   border-bottom: 4px solid #EE2A7B;
-
 }
 
-
-
 .card-text {
-
   font-size: 12px;
 }
 
 .footer {
-
   margin-top: 30px;
   margin-bottom: 30px;  
 }
