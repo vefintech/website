@@ -384,10 +384,10 @@
   <!--BLOQUE5-->
   <div id="novedades">
     <div class="container-fluid" id="bloque4">
-      <div class="row" id="bloque4-novedades">
-        <div class="col-md-12">
-          <center><h4 style="color: #fff;">NOVEDADES</h4></center>
 
+      <div class="row" id="bloque4-novedades">
+        <div class="col-md-12 py-4">
+          <center><h4 style="color: #fff;">NOVEDADES</h4></center>
               <div class="row">
                   <div class="col-md-12">
                     <center><div class="estilo-novedades"></div></center>
@@ -396,46 +396,37 @@
         </div>
       </div>
 
-      <div class="row" >
-            <div class="col-md-4" >
-                <div class="card mb-5 shadow-sm col-centrada" style="width: 70%; border-radius: 5%;">
-                    <img class="card-img-top" src="img/bloque4/foto-1.jpg" style="border-radius: 5%;">
-                    <div class="card-body">
-                      <h6 style="font-weight: bold;">Venezuela queda en el primer lugar de plataforma Digitales</h6>
-
-                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    </div>
-              </div>
-        </div>
-
-        <div class="col-md-4">
-                <div class="card mb-4 shadow-sm col-centrada" style="width: 70%; border-radius: 5%;">
-                  <img class="card-img-top" src="img/bloque4/foto-2.jpg" style="border-radius: 5%;">
-                    <div class="card-body">
-                      <h6 style="font-weight: bold;">Venezuela queda en el primer lugar de plataforma Digitales</h6>
-                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    </div>
-                 </div>
-            </div>
-
-            <div class="col-md-4">
-            <div class="card mb-4 shadow-sm col-centrada" style="width: 70%; border-radius: 5%;">
-            <img class="card-img-top" src="img/bloque4/foto-3.jpg" style="border-radius: 5%;">			                
-            <div class="card-body">
-              <h6 style="font-weight: bold;">Venezuela queda en el primer lugar de plataforma Digitales</h6>
-                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                       
-                  </div>
-              </div>
-        </div>
-        
+      <div>
+      <!-- medium -->
+      <div id="medium-widget"></div>
+        <script src="https://medium-widget.pixelpoint.io/widget.js"></script>
+        <script>MediumWidget.Init({renderTo: '#medium-widget', params: {"resource":"https://medium.com/@ve.fintech","postsPerLine":4,"limit":4,"picture":"big","fields":["description","claps","likes","publishAt"],"ratio":"landscape"}})</script>  
       </div>
     </div>
   </div>
+  <!-- Blog (medium) -->
+
+  <!-- Indicadores -->
   <div class="container-fluid " style="background-color: #131e26;color: #fff!important;">
-      <div class="text-uppercase text-center">Nuestra Red</div> 
+ 
+      <div class="row" id="bloque4-novedades">
+          <div class="col-md-12 py-4">
+            <center><h4 style="color: #fff;">NUESTRA RED</h4></center>
+                <div class="row">
+                    <div class="col-md-12">
+                      <center><div class="estilo-novedades"></div></center>
+                    </div>
+                  </div>
+          </div>
+        </div> 
+ 
       <% include indicators %>
   </div>
+
+  <!-- Instagram -->
+
+  <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+  <div class="elfsight-app-4a766e4a-fada-4010-a915-7c4bd0f9bb3a"></div>
 
   <!--footer-->
     <div class="container-fluid">
@@ -458,20 +449,14 @@
             </div>
           </div>					
           <div class="col-md-4 text-center" style="border-right: 1px solid #ee2a7b; padding-top: 5px;">
-               <ul class="nav navbar-nav w-100 justify-content-center">
-                          <li class="nav-item"> <a class="nav-link" href="#inicio" style="color: #383838;   font-weight: bold; margin:2px; font-size: 14px; "><h7>INICIO</h7></a>
-                          </li>
-                          <li class="nav-item"> <a class="nav-link" href="#nosotros" style="color: #383838; font-weight: bold; margin:2px; font-size: 14px;"><h7>QUIÉNES SOMOS</h7></a>
-                          </li>
-                          <li class="nav-item"> <a class="nav-link" href="#objetivos" style="color: #383838; font-weight: bold; margin:2px; font-size: 14px;"><h7>OBJETIVOS</h7></a>
-                          </li>
-                          <li class="nav-item"> <a class="nav-link" href="#afiliados" style="color: #383838; font-weight: bold; margin:2px; font-size: 14px;"><h7>PATROCINADORES</h7></a>
-                          </li>
-                          <li class="nav-item"> <a class="nav-link" href="/afiliados" style="color: #383838; font-weight: bold; margin:2px; font-size: 14px;"><h7>MIEMBROS</h7></a>
-                          </li>                          
-                          <li class="nav-item"> <a class="nav-link" href="#novedades" style="color: #383838; font-weight: bold; margin:2px; font-size: 14px; "><h7>NOVEDADES</h7></a>
-                          </li>                          
-                      </ul>
+             <ul class="nav navbar-nav w-100 justify-content-center">
+                  <li class="nav-item"> <a class="nav-link" href="#inicio" style="color: #383838;   font-weight: bold; margin:2px; font-size: 14px; "><h7>INICIO</h7></a></li>
+                  <li class="nav-item"> <a class="nav-link" href="#nosotros" style="color: #383838; font-weight: bold; margin:2px; font-size: 14px;"><h7>QUIÉNES SOMOS</h7></a></li>
+                  <li class="nav-item"> <a class="nav-link" href="#objetivos" style="color: #383838; font-weight: bold; margin:2px; font-size: 14px;"><h7>OBJETIVOS</h7></a></li>
+                  <li class="nav-item"> <a class="nav-link" href="#afiliados" style="color: #383838; font-weight: bold; margin:2px; font-size: 14px;"><h7>PATROCINADORES</h7></a></li>
+                  <li class="nav-item"> <a class="nav-link" href="/afiliados" style="color: #383838; font-weight: bold; margin:2px; font-size: 14px;"><h7>MIEMBROS</h7></a></li>                          
+                  <li class="nav-item"> <a class="nav-link" href="#novedades" style="color: #383838; font-weight: bold; margin:2px; font-size: 14px; "><h7>NOVEDADES</h7></a></li>                          
+              </ul>
                       <div class="row">
                         <div class="col-md-12" style="margin-top: 5px;">
                           <a href="https://commerce.coinbase.com/checkout/74f7177a-2ea2-4304-ad88-ffebc2fb8fc1" class="btn btn-lg" target="_blank" style="background-color: #f7931a; border-radius: 52px; font-weight: bold; color: #fff;">DONA EN <i class="fab fa-btc"></i></a>
@@ -488,11 +473,12 @@
                       <a href="https://twitter.com/VeFintech" target="_blank"><i class="fab fa-twitter fa-3x" id="redes-sociales"></i></a>
                       <a href="https://www.facebook.com/ve.fintech/" target="_blank"><i class="fab fa-facebook-f fa-2x" id="redes-sociales"></i></a>
                       <a href="https://www.instagram.com/ve.fintech/" target="_blank"><i class="fab fa-instagram fa-2x" id="redes-sociales"></i></a>
+                      <a href="https://www.youtube.com/channel/UCFNa0s1ZVEcvuK2xG093PKQ" target="_blank"><i class="fab fa-youtube fa-2x" id="redes-sociales"></i></a>
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col-md-12">
-                      <a href="https://www.youtube.com/channel/UCFNa0s1ZVEcvuK2xG093PKQ" target="_blank"><i class="fab fa-youtube fa-2x" id="redes-sociales"></i></a>
+                    <div class="col-md-12"><i class="fab "></i>
+                      <a href="https://medium.com/@ve.fintech" target="_blank"><i class="fab fa-medium fa-2x" id="redes-sociales"></i></a>
                       <a href="https://github.com/vefintech" target="_blank"><i class="fab fa-github-alt fa-2x" id="redes-sociales"></i></a>
                       <a href="https://us19.admin.mailchimp.com/campaigns/s" target="_blank"><i class="far fa-envelope fa-2x" id="redes-sociales"></i></a>
                     </div>
