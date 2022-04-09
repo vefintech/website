@@ -19,7 +19,7 @@
     "http-errors": "~1.6.2",
     "i18n": "^0.8.3",
     "jsonwebtoken": "^8.4.0",
-    "moment": "^2.22.2",
+    "moment": "^2.29.2",
     "morgan": "~1.9.0",
     "mysql2": "^1.6.4",
     "node-excel-export": "^1.4.4",
